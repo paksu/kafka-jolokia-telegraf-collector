@@ -5,9 +5,11 @@ Parses Kafka Broker JMX metrics exposed via jolokia and converts them to a set o
 
 Currently supports at least Kafka 0.9 and Influxdb 0.13. May support older Kafka but not tested
 
-https://jolokia.org
-https://docs.influxdata.com/influxdb/v0.13/write_protocols/line/
-http://kafka.apache.org/090/documentation.html#monitoring
+- https://jolokia.org
+- https://docs.influxdata.com/influxdb/v0.13/write_protocols/line/
+- http://kafka.apache.org/090/documentation.html#monitoring
+
+**If you use this script please let me know** https://twitter.com/joonapaak
 
 ## Requirements
 
@@ -25,7 +27,7 @@ Setting `KAFKA_OPTS=-javaagent:/path/to/jolokia/jolokia-1.3.3/agents/jolokia-jvm
 - `--jolokia-context` defaults to `/jolokia`
 
 Example:
-```python kafka_jolokia_reporter.py --jolokia-host=localhost --jolokia-port=8778 --jolokia-context=/jolokia”```
+```python kafka_jolokia_reporter.py --jolokia-host=localhost --jolokia-port=8778 --jolokia-context=/jolokia```
 
 ### Configure script to pass metrics to telegraf
 
