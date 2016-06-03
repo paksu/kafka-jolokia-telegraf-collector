@@ -3,6 +3,9 @@ import httplib
 import json
 import re
 
+# VERSION 0.1
+# FROM https://github.com/paksu/kafka-jolokia-telegraf-translator
+
 # Ignore any metric that contains these strings because we don't want to
 # collect aggregated data
 ignored_metrics = [
@@ -120,7 +123,7 @@ def fetch_jmx_from_jolokia(host, port, jolokia_context, metric):
 
 def translate_response(response, ignored_metrics=[]):
     """
-    Parses a Kafka JMX metrics response from jolokia and converts it to set of InfluxDB JSON Line protocol
+    Parses a Kafka JMX metrics response from jolokia and converts it to set of InfluxDB Line protocol
 
     Currently supports at least Kafka 0.9 and Influxdb 0.13
     https://jolokia.org
