@@ -1,9 +1,10 @@
+from __future__ import print_function
 import argparse
 import httplib
 import json
 import re
 
-# VERSION 0.1
+# VERSION 0.2
 # FROM https://github.com/paksu/kafka-jolokia-telegraf-translator
 
 # Ignore any metric that contains these strings because we don't want to
@@ -171,4 +172,4 @@ if __name__ == "__main__":
     for metric in metrics:
         response = fetch_jmx_from_jolokia(args.jolokia_host, args.jolokia_port, args.jolokia_context, metric)
         for line in translate_response(response):
-            print line
+            print(line)
