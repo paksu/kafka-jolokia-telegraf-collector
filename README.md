@@ -3,7 +3,7 @@
 
 Parses Kafka Broker JMX metrics exposed via jolokia and converts them to a set of InfluxDB Line protocol metrics
 
-Currently supports at least Kafka 0.9 and Influxdb 0.13. May support older Kafka but not tested
+Currently supports at least Kafka versions 0.9 or newer and Influxdb 0.13 or newer. May support older Kafka but not tested
 
 - https://jolokia.org
 - https://docs.influxdata.com/influxdb/v0.13/write_protocols/line/
